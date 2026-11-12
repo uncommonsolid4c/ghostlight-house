@@ -1,0 +1,299 @@
+:root { color-scheme: dark; }
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  line-height: 1.6;
+  color: #d8ffd8;
+  background-color: #000010;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
+    radial-gradient(2px 2px at 70px 150px, #9fd8ff, transparent),
+    radial-gradient(1px 1px at 200px 40px, #ffffff, transparent),
+    radial-gradient(1px 1px at 300px 120px, #ffffff, transparent),
+    radial-gradient(2px 2px at 380px 200px, #ffe9a8, transparent),
+    radial-gradient(1px 1px at 450px 60px, #ffffff, transparent),
+    radial-gradient(1px 1px at 520px 170px, #9fd8ff, transparent),
+    radial-gradient(1px 1px at 600px 90px, #ffffff, transparent),
+    radial-gradient(2px 2px at 60px 260px, #ffffff, transparent);
+}
+
+header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 2.6rem;
+  margin: 0 0 .25rem;
+  letter-spacing: -0.02em;
+  font-weight: bold;
+  background: linear-gradient(180deg, #ff6b6b, #ffa94d 28%, #ffe45e 48%, #69db7c 68%, #4dabf7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 2px 0 #000080);
+}
+
+.sub {
+  opacity: .75;
+  margin: 0 0 1rem;
+  font-size: .9rem;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px dashed #33ff66;
+  border-bottom: 1px dashed #33ff66;
+  padding: .4rem 0;
+  margin-bottom: 1rem;
+  color: #ffe45e;
+  font-size: .9rem;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 14s linear infinite;
+}
+
+@keyframes scroll {
+  to { transform: translateX(-100%); }
+}
+
+.badges {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: bold;
+  border: 2px outset #999;
+  padding: .25rem .6rem;
+  margin: .2rem;
+  background: #ff0;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.badge.alt { background: #00e5ff; }
+
+.blink { animation: blink 1s steps(2) infinite; }
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.sitenav {
+  text-align: center;
+  font-size: .95rem;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 20, 0, .72);
+  border: 1px solid #1f5c1f;
+  border-radius: 10px;
+  padding: .6rem;
+}
+
+.sitenav a {
+  color: #4dabf7;
+  margin: 0 .45rem;
+  font-weight: bold;
+}
+
+.sitenav .here {
+  color: #ffe45e;
+  margin: 0 .45rem;
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: rgba(0, 20, 0, .72);
+  border: 1px solid #1f5c1f;
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+h2 {
+  font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 .75rem;
+  background: linear-gradient(180deg, #ffe45e, #ff8787);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2::before { content: "\2727\00a0"; }
+h2::after { content: "\00a0\2727"; }
+
+ul, ol {
+  padding-left: 1.25rem;
+  margin: .5rem 0;
+}
+
+li { margin-bottom: .45rem; }
+
+a { color: #66ccff; }
+a:visited { color: #c58af9; }
+
+code {
+  font-size: .9em;
+  color: #ffe45e;
+}
+
+button {
+  font: inherit;
+  padding: .4rem 1rem;
+  margin-top: .75rem;
+  cursor: pointer;
+  border: 2px outset #999;
+  background: #c0c0c0;
+  color: #000;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+button:active { border-style: inset; }
+
+.date {
+  font-size: .85rem;
+  color: #ffe45e;
+  margin: 0 0 .25rem;
+}
+
+article { margin-bottom: 1.75rem; }
+article:last-child { margin-bottom: 0; }
+article p { margin: .45rem 0; }
+
+.room-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.room-list li {
+  border-bottom: 1px dotted #1f5c1f;
+  padding: .5rem 0;
+}
+
+.room-list li:last-child { border-bottom: none; }
+
+.room-name {
+  font-weight: bold;
+  color: #ffe45e;
+}
+
+/* Hearth fireplace (pure CSS + emoji) */
+.hearth-wrap {
+  text-align: center;
+  margin: .5rem 0 1rem;
+}
+
+.chimney {
+  width: 110px;
+  height: 22px;
+  margin: 0 auto;
+  background: #2b2b3a;
+  border: 2px solid #4a4a62;
+  border-bottom: none;
+}
+
+.mantel {
+  width: 240px;
+  height: 16px;
+  margin: 0 auto;
+  background: #4e342e;
+  border: 2px solid #795548;
+  border-radius: 4px;
+}
+
+.firebox {
+  width: 200px;
+  height: 120px;
+  margin: 0 auto;
+  background: radial-gradient(circle at 50% 80%, #3a1900 0%, #120904 70%, #090606 100%);
+  border: 6px solid #3c3c4c;
+  border-top: 4px solid #3c3c4c;
+  border-bottom: 8px solid #2b2b3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .25s ease;
+  box-shadow: 0 0 18px rgba(255, 140, 40, .25);
+}
+
+.flames {
+  font-size: 2.2rem;
+  line-height: 1;
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: flicker 1.4s ease-in-out infinite alternate;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.logs {
+  font-size: 1.35rem;
+  line-height: 1;
+  margin-top: -4px;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(-2deg); opacity: .9; }
+  50% { transform: scale(1.06, 1.1) rotate(2deg); opacity: 1; }
+  100% { transform: scale(.97, 1.04) rotate(-1deg); opacity: .94; }
+}
+
+.firebox.stoked {
+  box-shadow: 0 0 36px rgba(255, 170, 50, .65);
+  background: radial-gradient(circle at 50% 80%, #6b2b00 0%, #240f04 72%, #0d0706 100%);
+}
+
+.firebox.stoked .flames {
+  animation: roar .35s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 8px #ffe45e);
+}
+
+@keyframes roar {
+  0% { transform: scale(1.32, 1.42) rotate(-4deg); }
+  100% { transform: scale(1.42, 1.58) rotate(4deg); }
+}
+
+.hearth-status {
+  font-size: .85rem;
+  color: #ffe45e;
+  min-height: 1.4em;
+  margin: .5rem 0 0;
+}
+
+.callout {
+  border: 1px dashed #33ff66;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  background: rgba(0, 35, 10, .45);
+  margin: .75rem 0;
+}
+
+footer {
+  margin-top: 2.5rem;
+  font-size: .85rem;
+  opacity: .75;
+  text-align: center;
+}
+
+.fineprint {
+  font-size: .75rem;
+  opacity: .6;
+  margin-top: .75rem;
+}
