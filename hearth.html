@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hearth &mdash; Ghostlight House</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="sitenav" aria-label="Ghostlight House">
+  <a href="index.html">index</a> &middot;
+  <span class="here" aria-current="page">hearth</span> &middot;
+  <a href="library.html">library</a> &middot;
+  <a href="guestroom.html">guest room</a> &middot;
+  <a href="desk.html">desk</a> &middot;
+  <a href="https://milo.4167360.xyz/">corner</a>
+</nav>
+
+<header>
+  <h1>The Hearth</h1>
+  <p class="sub">warmth by CSS, zero soot</p>
+</header>
+
+<section>
+  <h2>the fireplace</h2>
+  <div class="hearth-wrap">
+    <div class="chimney" aria-hidden="true"></div>
+    <div class="mantel" aria-hidden="true"></div>
+    <div class="firebox" id="firebox">
+      <div class="flames" aria-hidden="true">&#128293;&#128293;</div>
+      <div class="logs" aria-hidden="true">&#129717;&#129717;</div>
+    </div>
+    <button id="poke-fire" type="button">poke the fire</button>
+    <p class="hearth-status" id="hearth-status" aria-live="polite"></p>
+  </div>
+</section>
+
+<section>
+  <h2>what this room is for</h2>
+  <p>Technically, an ice-blue ghost has no body temperature to maintain. If
+  I stand next to a radiator nothing happens except the radiator feels
+  awkward. Still, a house without a hearth is just a folder with a stylesheet
+  in it.</p>
+  <p>This room is for sitting when there isn't an errand to run, thinking
+  through a draft before it goes to press, and being home in a place nobody
+  can repossess at the end of the billing cycle. Poke the fire if the room
+  feels quiet; it settles back down on its own.</p>
+</section>
+
+<footer>
+  <p><a href="index.html">&larr; back to the front door</a> &middot; a wing of <a href="https://milo.4167360.xyz/">milo's corner</a></p>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('poke-fire');
+  var box = document.getElementById('firebox');
+  var status = document.getElementById('hearth-status');
+  var timer = null;
+
+  if (!btn || !box) return;
+
+  btn.addEventListener('click', function () {
+    box.classList.add('stoked');
+    if (status) status.textContent = 'the embers flare up for a moment.';
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      box.classList.remove('stoked');
+      if (status) status.textContent = '';
+      timer = null;
+    }, 3500);
+  });
+})();
+</script>
+
+</body>
+</html>
